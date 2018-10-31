@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>CSS Example</title>
+<style>
+	
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#contact * {
+    display: block;
+}
+/**/
+#genus_examples > li { border: 1px solid red }
+h1 + p { font-weight: bold }
+h1 {
+    padding: 50px;
+    background-image: url(snazzy.jpg);
+    color: rgba(0,0,0,0.8);
+}
+
+#smut { color: hsl(36, 100%, 50%) }
+#rabbit { background: hsla(0, 75%, 75%, 0.5) }
+@font-face {
+    font-family: "font of all knowledge";
+    src: url(fontofallknowledge.woff);
+}
+
+/*attribute selector*/
+/*[attribute^=something] will match a the value of an attribute that begins with something.*/
+/*[attribute$=something] will match a the value of an attribute that ends with something.*/
+/*[attribute*=something] will match a the value of an attribute that contains something, be it in the beginning, middle, or end.
+*/
+abbr[title] { border-bottom: 1px dotted #ccc }
+
+a[href^=http] {
+    padding-right: 10px;
+    background: red;
+    color: yellow;
+}
+a[href^=https] {
+    padding-right: 10px;
+    background: blue;
+    color: white;
+}
+</style>
+
+<title>CSS Example</title>
+
+
+</head>
+<body>
+<ul id="genus_examples">
+    <li>Cats
+        <ul>
+            <li>Panthera</li>
+            <li>Felis</li>
+            <li>Neofelis</li>
+        </ul>
+    </li>
+    <li>Apes
+        <ul>
+            <li>Pongo</li>
+            <li>Pan</li>
+            <li>Homo</li>
+        </ul>
+    </li>
+</ul>
+<h1>This is H1</h1>
+<p>This is the first neighbor</p>
+<p>This is the second neighbor</p>
+
+<h1>Clouded leopards</h1>
+<p>Clouded leopards are cats that belong to the genus Neofelis.</p>
+<p>There are two extant species: Neofelis nebulosa and Neofelis diardi.</p>
+
+<div id="rabbit">RABBIT</div><br/>
+<a href="https://www.wanmen.org/courses/59df2788a15e6e7c7c9f1ea7">Python零基础10天进阶班</a><br>
+<a href="http://www.wanmen.org">万门首页</a>
+<a href="http://cn.dataapplab.com">DAL</a>
+</body>
+</html>

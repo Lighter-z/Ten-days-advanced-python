@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>CSS Example</title>
+<style>
+	
+.test{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(yellow, red);
+    transition-duration: 3s;
+/*     以下三值为默认值，稍后会详细介绍 
+　　过渡transition的这四个子属性只有<transition-duration>是必需值且不能为0。
+其中，<transition-duration>和<transition-delay>都是时间。
+当两个时间同时出现时，第一个是<transition-duration>，第二个是<transition-delay>；
+当只有一个时间时，它是<transition-duration>，而<transition-delay>为默认值0
+
+*/
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}    
+.test:hover{
+    width: 500px;
+}
+
+
+</style>
+
+<title>CSS Example</title>
+
+
+</head>
+<body>
+<div class="test"></div>
+</body>
+</html>

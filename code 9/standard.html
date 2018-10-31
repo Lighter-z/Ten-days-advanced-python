@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>JavaScript!</title>
+    <style type="text/css">
+      div{color: green;}  
+    </style>        
+    </head>
+    <body>
+        <div id="text1">My Color</div>          
+        <div id="text2">Second Color</div>        
+        <p id="text3">Second Color</p>          
+        <p class="ptext">P Text Color</p>    
+        <button id ="button">click me</button>
+        <div id="square" style="width: 100px; height: 100px; background-color:pink;">
+        </div>      
+        <a href="http://wanmen.org">Wanmen</a>
+        <a href="http://cn.dataapplab.com">DAL</a>
+        <script type="text/javascript">
+        // <![CDATA[
+
+        var handleClick = function(event){
+            console.log(this);
+            this.style.color="red";
+        }
+        window.onload = function(){
+            var text = document.getElementById("text1");
+            text.onclick = handleClick;
+            
+            var elems = document.getElementsByTagName('a');
+
+            for (var i = 0; i < elems.length; i++) {
+                elems[i].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert('Prevent ! ');
+                }, 'false');
+
+            }
+        };
+            var button = document.getElementById("button");
+            var square = document.getElementById("square");
+            button.onclick = function(){
+                    square.style.display = "none";
+                };
+        // ]]>
+        </script>
+     
+    </body>
+</html>
